@@ -31,7 +31,7 @@ function calcularMedia(nota1, nota2){
     console.log("Média do Auno : " + media)
     
 }
-calcularMedia()
+//calcularMedia()
 console.log("---------------------------------------------")
 
 function adicionarPontos(notaOriginal, pontoExtras){
@@ -40,7 +40,7 @@ function adicionarPontos(notaOriginal, pontoExtras){
     notaAtualizada = notaOriginal + pontoExtras
     console.log("Nota atualizada : " +  notaAtualizada)
 }
-adicionarPontos()
+//adicionarPontos()
 console.log("---------------------------------------------")
 
 
@@ -52,7 +52,7 @@ function verificarAprovacao(media){
         console.log("Aluno reprovado!")
     }
 }
-verificarAprovacao()
+//verificarAprovacao()
 console.log("---------------------------------------------")
 
 function classificarAluno(nota){
@@ -67,8 +67,8 @@ function classificarAluno(nota){
         console.log("Classificação: Insuficiente")
     }
 }
-classificarAluno()
-console.log("---------------------------------------------")
+//classificarAluno()
+//console.log("---------------------------------------------")
 
 function calcularMensalidade(valor){
     const desconto = 0.10
@@ -79,12 +79,16 @@ let valorFinal = calcularMensalidade(500)
 console.log("Valor com desconto: "+ valorFinal)
 console.log("---------------------------------------------")
 
-function avaliarAluno(nome, nota1, nota2){
-    nome = prompt("Digite o nome do aluno: ")
+function calcularMedia(nota1, nota2){
     nota1 = Number(prompt("Digite a nota do aluno: "))
     nota2 = Number(prompt("Digite a 2º nota do aluno: "))
-    media =( nota1 + nota2) / 2
-    
+    media = ( nota1 + nota2) / 2
+    return media
+}
+
+function avaliarAluno(nome, media){
+    nome = prompt("Digite o nome do aluno: ")
+    media = calcularMedia()
     if(media >= 60){
         situacao = "Aprovado"
     }else{
@@ -92,7 +96,7 @@ function avaliarAluno(nome, nota1, nota2){
     }
 
     console.log("Aluno : " + nome)
-    console.log("Média : " + media)
+    console.log("Média : " + media)//
     console.log("Situaçao : " + situacao)
 }
 
